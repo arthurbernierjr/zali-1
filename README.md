@@ -255,12 +255,21 @@
 
 1. What are the three main types of loops in JavaScript, and what are their differences?
 
-- `For` Loop : use when you know how many times you need to iterate
-- `While` Loop : use when the number of iterations is not known beforehand
-- `Do... While` Loop : use when you want the loop to run at least once beforehand.
+   - `For` Loop : use when you know how many times you need to iterate
+   - `While` Loop : use when the number of iterations is not known beforehand
+   - `Do... While` Loop : use when you want the loop to run at least once beforehand.
 
 2. Explain the differences between `var`, `let`, and `const` in JavaScript.
+
+   -`var`: function-scoped, meaning if declared inside a function, it only is accessible within that function & you can redeclare a variable
+
+   -`let`: blocked-scoped, meaning it only accessible within the block it is declared & the variable can be reassign
+
+   `const`: blocked-scoped & cannot be reassigned
+
 3. What is a JavaScript closure, and why is it important?
+   - A javascript closure is the inner function ability to access the outer function scope.
+   - This is important to keep information private, create special functions that show certain thing, keep tracking of information
 
 #### **Python Homework:**
 
