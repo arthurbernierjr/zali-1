@@ -294,6 +294,35 @@
   print(f"Total: {total}, Average: {average}, Largest: {largest}, Smallest: {smallest}")
   ```
 
+  My solution: chatGPT assisted
+
+  ```python
+  # Function defintion
+  def numberAnalysis(numbers):
+    if not numbers:
+        return "No numbers founds"
+        total_sum = sum(numbers) #sum function of numbers
+        average = total_sum/len(numbers) #len determins number of element in list
+        largest = max(numbers) #finds the largest number
+        smallest = min(numbers) #finds the smallest
+            return{
+        "Sum": total_sum,
+        "Average": average,
+        "Largest":largest,
+        "Smallest": smallest
+    } #returns dictonary (a collection of key-value pairs)
+
+    numbers = [3, 7, 2, 8, 10]
+    result = numberAnalysis(numbers)
+
+    print(f"Sum:{result['Sum']}")
+    print(f"Average: {result['Average']:.2f}") #formats the average to two decimal places.
+    print(f"Largest: {result['Largest']}")
+    print(f"Smallest: {result['Smallest']}")
+
+
+  ```
+
 **Task 2: Python Coding Challenge**
 
 - Write a function that takes a string and returns the most common character in the string. If there’s a tie, return the first one encountered.
@@ -307,7 +336,27 @@
           frequency[char] = frequency.get(char, 0) + 1
       return max(frequency, key=frequency.get)
 
-  print(most_common_char("hello"))  # l
+  print(most_common_char("hello"))
+  ```
+
+  ```python
+  def most_common_char(string):
+      frequency = {}
+
+      for char in string:
+          frequency[char] = frequency.get(char, 0) + 1
+
+      max_char = None
+      max_count =  0
+
+      for char, count in frequency.items(): #looping through the frequency dictonary
+          if count > max_count:
+              max_count = count
+              max_char = char
+
+      return max_char
+
+    result = most_common_char('mississippi')
   ```
 
 ---
